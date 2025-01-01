@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <header>
+        <h1>لوحة التحكم</h1>
+        <a href="index.html" class="back-link">العودة للموقع</a>
+    </header>
+    <main>
+        <section class="admin-section">
+            <h2>إدارة المنشورات</h2>
+            <form id="postForm">
+                <label for="title">عنوان المنشور:</label>
+                <input type="text" id="title" name="title" placeholder="اكتب عنوان المنشور" required>
+                
+                <label for="content">محتوى المنشور:</label>
+                <textarea id="content" name="content" placeholder="اكتب محتوى المنشور هنا..." required></textarea>
+                
+                <label for="media">رفع صورة أو فيديو:</label>
+                <input type="file" id="media" name="media" accept="image/*,video/*">
+                
+                <button type="submit" class="add-button">إضافة المنشور</button>
+            </form>
+        </section>
+
+        <section class="admin-section">
+            <h2>المنشورات الحالية</h2>
+            <div id="postList" class="post-list">
+                <!-- المنشورات ستظهر هنا -->
+            </div>
+        </section>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>
